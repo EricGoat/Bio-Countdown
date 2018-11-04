@@ -19,7 +19,6 @@ api = tweepy.API(auth)
 #Grabs User Data
 user = api.me()
 NAME = 'Eric Garcia'
-DESCRIPTION = user.description
 
 #Calculates days until birthday 
 now = datetime.today()
@@ -30,5 +29,5 @@ countdown = str(countdown)
 countdown = countdown[:-13]
 
 #Updates Description
-DESCRIPTION = DESCRIPTION[:-7] + countdown + '🍻 |' 
+DESCRIPTION = "Live as if you'll die tomorrow; learn as if you'll live forever - Gandhi | Musician | #HEATCulture | UCF 21' ⚔️ | Computer Science | theGoat | %s 🍻 |" %(countdown)  
 api.update_profile(NAME, None, None, DESCRIPTION)
